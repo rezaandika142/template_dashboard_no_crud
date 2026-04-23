@@ -229,17 +229,3 @@
         </tbody>
     </table>
 </div>
-
-                    <td><?php echo htmlspecialchars($usr['email']); ?></td>
-                    <td><?php echo htmlspecialchars($usr['full_name']); ?></td>
-                    <td>
-                        <span class="role-badge role-<?php echo $usr['role']; ?>">
-                            <?php echo ucfirst($usr['role']); ?>
-                        </span>
-                    </td>
-                    <td><?php echo $usr['created_at']; ?></td>
-                </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
-</div>
