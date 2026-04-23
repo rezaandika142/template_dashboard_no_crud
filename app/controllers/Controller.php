@@ -12,6 +12,14 @@ class Controller {
     protected $data = [];
 
     /**
+     * Constructor
+     */
+    public function __construct() {
+        // Initialize data array
+        $this->data = [];
+    }
+
+    /**
      * Render view
      */
     protected function render($view, $data = []) {
