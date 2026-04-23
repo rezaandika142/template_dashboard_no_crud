@@ -96,7 +96,7 @@ class Controller {
      */
     protected function requireLogin() {
         if (!$this->isLoggedIn()) {
-            $this->redirect(APP_URL . '/index.php?controller=auth&action=login');
+            $this->redirect('?controller=auth&action=login');
         }
     }
 
@@ -105,7 +105,7 @@ class Controller {
      */
     protected function requireLogout() {
         if ($this->isLoggedIn()) {
-            $this->redirect(APP_URL . '/index.php?controller=dashboard&action=index');
+            $this->redirect('?controller=dashboard&action=index');
         }
     }
 }
