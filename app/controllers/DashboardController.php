@@ -55,7 +55,22 @@ class DashboardController extends Controller {
      * Menampilkan halaman analytics
      */
     public function analytics() {
-        $this->set('page_title', 'Analytics');
+        $user = $this->getUser();
+        
+        // Get analytics data
+        $analyticsData = [
+            'page_views' => 45231,
+            'engagement' => 3214,
+            'conversion_rate' => 3.24,
+            'revenue' => 45320
+        ];
+        
+        $this->set([
+            'page_title' => 'Analytics',
+            'user' => $user,
+            'analytics' => $analyticsData
+        ]);
+        
         $this->render('analytics');
     }
 
@@ -63,10 +78,12 @@ class DashboardController extends Controller {
      * Menampilkan halaman users
      */
     public function users() {
+        $user = $this->getUser();
         $users = $this->userModel->getAllUsers();
         
         $this->set([
             'page_title' => 'Users',
+            'user' => $user,
             'users' => $users
         ]);
 
@@ -77,7 +94,13 @@ class DashboardController extends Controller {
      * Menampilkan halaman reports
      */
     public function reports() {
-        $this->set('page_title', 'Reports');
+        $user = $this->getUser();
+        
+        $this->set([
+            'page_title' => 'Reports',
+            'user' => $user
+        ]);
+        
         $this->render('reports');
     }
 
@@ -85,7 +108,13 @@ class DashboardController extends Controller {
      * Menampilkan halaman settings
      */
     public function settings() {
-        $this->set('page_title', 'Settings');
+        $user = $this->getUser();
+        
+        $this->set([
+            'page_title' => 'Settings',
+            'user' => $user
+        ]);
+        
         $this->render('settings');
     }
 }
