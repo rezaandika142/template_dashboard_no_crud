@@ -87,6 +87,17 @@
             color: white;
         }
 
+        .sidebar-menu a.active {
+            background-color: var(--primary-color);
+            color: white;
+            border-left: 4px solid white;
+            padding-left: 16px;
+        }
+
+        .sidebar-menu a.active:hover {
+            background-color: #2980b9;
+        }
+
         .sidebar-menu i {
             margin-right: 15px;
             width: 20px;
@@ -253,11 +264,11 @@
                 <h2><i class="fas fa-chart-line"></i> <?php echo APP_NAME; ?></h2>
             </div>
             <ul class="sidebar-menu">
-                <li><a href="?controller=dashboard&action=index"><i class="fas fa-home"></i> Dashboard</a></li>
-                <li><a href="?controller=dashboard&action=analytics"><i class="fas fa-chart-bar"></i> Analytics</a></li>
-                <li><a href="?controller=dashboard&action=users"><i class="fas fa-users"></i> Users</a></li>
-                <li><a href="?controller=dashboard&action=reports"><i class="fas fa-file"></i> Reports</a></li>
-                <li><a href="?controller=dashboard&action=settings"><i class="fas fa-cog"></i> Settings</a></li>
+                <li><a href="?controller=dashboard&action=index" <?php echo (isset($_GET['action']) && $_GET['action'] === 'index') ? 'class="active"' : ''; ?>><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="?controller=dashboard&action=analytics" <?php echo (isset($_GET['action']) && $_GET['action'] === 'analytics') ? 'class="active"' : ''; ?>><i class="fas fa-chart-bar"></i> Analytics</a></li>
+                <li><a href="?controller=dashboard&action=users" <?php echo (isset($_GET['action']) && $_GET['action'] === 'users') ? 'class="active"' : ''; ?>><i class="fas fa-users"></i> Users</a></li>
+                <li><a href="?controller=dashboard&action=reports" <?php echo (isset($_GET['action']) && $_GET['action'] === 'reports') ? 'class="active"' : ''; ?>><i class="fas fa-file"></i> Reports</a></li>
+                <li><a href="?controller=dashboard&action=settings" <?php echo (isset($_GET['action']) && $_GET['action'] === 'settings') ? 'class="active"' : ''; ?>><i class="fas fa-cog"></i> Settings</a></li>
                 <li><a href="?controller=auth&action=logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
             </ul>
         </div>
