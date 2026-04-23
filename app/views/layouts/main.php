@@ -253,12 +253,12 @@
                 <h2><i class="fas fa-chart-line"></i> <?php echo APP_NAME; ?></h2>
             </div>
             <ul class="sidebar-menu">
-                <li><a href="<?php echo APP_URL; ?>/index.php?controller=dashboard&action=index"><i class="fas fa-home"></i> Dashboard</a></li>
-                <li><a href="<?php echo APP_URL; ?>/index.php?controller=dashboard&action=analytics"><i class="fas fa-chart-bar"></i> Analytics</a></li>
-                <li><a href="<?php echo APP_URL; ?>/index.php?controller=dashboard&action=users"><i class="fas fa-users"></i> Users</a></li>
-                <li><a href="<?php echo APP_URL; ?>/index.php?controller=dashboard&action=reports"><i class="fas fa-file"></i> Reports</a></li>
-                <li><a href="<?php echo APP_URL; ?>/index.php?controller=dashboard&action=settings"><i class="fas fa-cog"></i> Settings</a></li>
-                <li><a href="<?php echo APP_URL; ?>/index.php?controller=auth&action=logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                <li><a href="?controller=dashboard&action=index"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="?controller=dashboard&action=analytics"><i class="fas fa-chart-bar"></i> Analytics</a></li>
+                <li><a href="?controller=dashboard&action=users"><i class="fas fa-users"></i> Users</a></li>
+                <li><a href="?controller=dashboard&action=reports"><i class="fas fa-file"></i> Reports</a></li>
+                <li><a href="?controller=dashboard&action=settings"><i class="fas fa-cog"></i> Settings</a></li>
+                <li><a href="?controller=auth&action=logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
             </ul>
         </div>
 
@@ -274,7 +274,7 @@
                         <p><?php echo htmlspecialchars($user['full_name']); ?></p>
                         <small><?php echo ucfirst($user['role']); ?></small>
                     </div>
-                    <a href="<?php echo APP_URL; ?>/index.php?controller=auth&action=logout" class="logout-btn">
+                    <a href="?controller=auth&action=logout" class="logout-btn">
                         <i class="fas fa-sign-out-alt"></i> Logout
                     </a>
                 </div>
