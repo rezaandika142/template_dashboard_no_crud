@@ -44,8 +44,8 @@ class AuthController extends Controller {
                     $_SESSION['user'] = $user;
                     $_SESSION['login_time'] = time();
 
-                    // Redirect ke dashboard
-                    $this->redirect(APP_URL . '/index.php?controller=dashboard&action=index');
+                    // Redirect ke dashboard (relative URL)
+                    $this->redirect('?controller=dashboard&action=index');
                 } else {
                     $error = 'Username atau password salah';
                 }
@@ -64,7 +64,7 @@ class AuthController extends Controller {
         // Destroy session
         session_destroy();
 
-        // Redirect ke login
-        $this->redirect(APP_URL . '/index.php?controller=auth&action=login');
+        // Redirect ke login (relative URL)
+        $this->redirect('?controller=auth&action=login');
     }
 }

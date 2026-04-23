@@ -17,7 +17,8 @@ define('DB_PORT', 3306);
 // Application Configuration
 define('APP_NAME', 'Dashboard Template');
 define('APP_VERSION', '1.0.0');
-define('APP_URL', 'http://localhost/dashboard_template');
+define('APP_URL', 'http://localhost:8000/dashboard_template/public');
+define('BASE_PATH', '/dashboard_template/public');
 
 // Session Configuration
 define('SESSION_TIMEOUT', 3600); // 1 hour
