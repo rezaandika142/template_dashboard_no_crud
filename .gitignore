@@ -1,0 +1,62 @@
+# PHP & Framework
+*.php~
+*.phar
+
+# Composer
+/vendor/
+composer.lock
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+var/logs/
+*.log
+
+# Cache
+var/cache/
+*.cache
+
+# Uploads
+var/uploads/*
+!var/uploads/.gitkeep
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Database
+*.db
+*.sqlite
+*.sql
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node modules (jika menggunakan npm/yarn)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Build files
+dist/
+build/
+
+# Testing
+coverage/
+.phpunit.result.cache
+
+# Dependencies
+vendor/
