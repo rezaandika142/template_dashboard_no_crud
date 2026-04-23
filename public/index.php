@@ -36,6 +36,12 @@ try {
             break;
 
         case 'dashboard':
+            // Check if user logged in before instantiate DashboardController
+            if (!isset($_SESSION['user_id'])) {
+                header('Location: ?controller=auth&action=login');
+                exit;
+            }
+            
             $dashboardController = new DashboardController();
             
             if ($action === 'index') {

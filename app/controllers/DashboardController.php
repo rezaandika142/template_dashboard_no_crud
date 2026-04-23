@@ -19,8 +19,8 @@ class DashboardController extends Controller {
         $this->activityModel = new Activity();
         $this->userModel = new User();
         
-        // Require login
-        $this->requireLogin();
+        // Login check sudah dilakukan di router (public/index.php)
+        // Jadi tidak perlu call requireLogin() di sini
     }
 
     /**
